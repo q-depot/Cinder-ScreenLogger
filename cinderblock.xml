@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+  name="Cinder-ScreenLogger"
+  id= "uk.nocte.screenlogger"
+  git="git@github.com:q-depot/Cinder-ScreenLogger.git"
+  author="Andrea Cuius"
+  >
+  <supports os="macosx" />
+  <supports os="ios" />
+  <supports os="msw" />
+
+  <headerPattern>src/*.h</headerPattern>
+  <sourcePattern>src/*.cpp</sourcePattern>
+
+  <includePath>src/</includePath>
+
+</block>
+</cinder>
