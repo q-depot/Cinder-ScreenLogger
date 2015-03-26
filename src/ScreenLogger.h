@@ -23,7 +23,7 @@ public:
 
     static void log( std::string msg ) { mBuffer.push_back( msg ); }
 
-    static void render( glm::vec2 pos = glm::vec2(0) );
+    static void render( ci::Vec2f pos = ci::Vec2f(0) );
 
 private:
 

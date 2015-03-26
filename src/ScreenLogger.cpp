@@ -23,7 +23,7 @@ void ScreenLogger::init( uint8_t bufferSize, ci::Font font )
 }
 
 
-void ScreenLogger::render( glm::vec2 pos )
+void ScreenLogger::render( ci::Vec2f pos )
 {
     ci::gl::color( ci::Color::white() );
 
@@ -32,10 +32,10 @@ void ScreenLogger::render( glm::vec2 pos )
     for( int k=0; k < mBuffer.size(); k++ )
         text += mBuffer[k] + "\n";
 
-    ci::TextBox tbox = ci::TextBox().font( mFont ).size( glm::ivec2( ci::TextBox::GROW, ci::TextBox::GROW ) ).text( text );
+    ci::TextBox tbox = ci::TextBox().font( mFont ).size( ci::Vec2i( ci::TextBox::GROW, ci::TextBox::GROW ) ).text( text );
     tbox.setBackgroundColor( ci::ColorA( 0.0f, 0.0f, 0.0f, 0.6f ) );
 
-    mTexture = ci::gl::Texture2d::create( tbox.render() );
+    mTexture = ci::gl::Texture::create( tbox.render() );
     ci::gl::draw( mTexture, pos );
 
 }
